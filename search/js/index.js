@@ -35,9 +35,9 @@ class Recomand {
         list.forEach((item) => {
             ret += `<li class="poster">
                         <a class="link" href="${item.url}" target="_blank">
-                            <span class="title">${item.title}</span>
-                            <span class="dur">更新日期：${item.update_time}</span>
                             <img class='img' src="${item.imgh_url}" alt="${item.title}">
+                            <span class="title">${item.title}</span>
+                            <span class="update">${item.update}</span>
                         </a>
                     </li>`;
         });

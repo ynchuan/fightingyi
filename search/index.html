@@ -5,73 +5,28 @@
     <meta charset="utf-8" />
     <title>检索</title>
     <style>
+
+    html,
+    body{
+        margin: 0;
+    }
+
     .wrap {
         width: 1200px;
         margin: 0 auto;
     }
 
-    .li-1 {
-        width: 420px;
-        float: left;
-    }
-
-    .cuids {
-        width: 400px;
-        margin-right: 10px;
-        padding: 5px;
-        float: left;
-        overflow: hidden;
-        border: 1px solid #ccc;
-        line-height: 30px;
-        font-size: 13px;
-        color: #000;
-    }
-
     .head {
-        overflow: hidden;
-        clear: both;
+        margin: 0;
+    }
+    .main .wrap{
+        font-size: 13px;
+    }
+    .operator{
+        margin: 10px 0;
     }
 
-    .cuid:hover,
-    .cuid.active {
-        color: #5087e2;
-    }
-
-    .cuid {
-        cursor: pointer;
-    }
-
-    .rec,
-    .li-2 {
-        width: 450px;
-    }
-
-    .history,
-    .li-3 {
-        width: 250px;
-        overflow: hidden;
-    }
-
-    .compare {
-        padding: 20px;
-    }
-
-    .compare-item {
-        display: inline-block;
-        line-height: 30px;
-        border: 1px solid #ccc;
-        width: 30px;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .compare-item.active,
-    .compare-item:hover {
-        border: 1px solid #5087e2;
-        color: #5087e2;
-    }
-
-    ul {
+    .recs {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -82,7 +37,7 @@
         text-decoration: none;
         border-bottom: none;
         font-size: 12px;
-        padding:10px;
+        padding: 10px 0;
     }
 
     .link {
@@ -90,29 +45,51 @@
         color: #5087e2;
         text-decoration: none;
         font-size: 12px;
+        overflow: hidden;
     }
 
     .img {
         width: 100px;
-        vertical-align: middle;
+        margin-right:10px;
+        float: left;
     }
 
     .title {
         margin: 0;
         line-height: 25px;
     }
+    .keyword{
+        line-height: 25px;
+        outline: none;
+    }
+    .search{
+        display: inline-block;
+        line-height: 25px;
+        border-radius: 3px;
+        background: #eee;
+        border-radius: 1px solid #ccc;
+        padding: 2px 10px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    .update{
+        display: block;
+    }
     </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <h1 class="header">FIGHTING YI!</h1>
-        <p class="intro">检索功能</p>
-        <div class="main">
+    <h1 class="head">
+        <div class="wrap">
+            FIGHTING YI!
+        </div>
+    </h1>
+    <div class="main">
+        <div class="wrap">
             <div class="operator">
                 请输入检索关键字：
-                <input type="text" id="keyword">
-                <span class="button" id="search">检索</span>
+                <input type="text" id="keyword" class="keyword">
+                <span class="search" id="search">检索</span>
             </div>
             <div class="result" id="result">
             </div>
