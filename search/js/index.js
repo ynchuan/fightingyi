@@ -1,8 +1,9 @@
-class Recomand {
+class Search {
     constructor() {
         this.$keyword = $('#keyword');
         this.$search = $('#search');
         this.$result = $('#result');
+        this.$loading = $('#loading');
     }
     init() {
         this.$search.on('click', (e) => {
@@ -11,6 +12,7 @@ class Recomand {
         });
     }
     fetch() {
+        this.$loading.removeClass('hide');
         if (this.data) {
             this.render();
             return;
@@ -21,28 +23,26 @@ class Recomand {
                 this.data = data;
                 this.render();
             };
-            $.getJSON('http://v.baidu.com/staticapi/api_hotsearch.json?callback=?', (data) => {
-                console.log('h');
-            });
+            $.getJSON('http://v.baidu.com/staticapi/api_hotsearch.json?callback=?');
         }, 1000);
     }
-    boot() {
-        this.init();
-    }
     render(data) {
-        let ret = '<ul class="recs">';
-        let list = this.adapter();
-        list.forEach((item) => {
-            ret += `<li class="poster">
+        setTimeout(() => {
+            let ret = '<ul class="recs">';
+            let list = this.adapter();
+            list.forEach((item) => {
+                ret += `<li class="poster" data-id='28827'>
                         <a class="link" href="${item.url}" target="_blank">
                             <img class='img' src="${item.imgh_url}" alt="${item.title}">
                             <span class="title">${item.title}</span>
-                            <span class="update">${item.update}</span>
+                            <span class="update">${item.update_time}</span>
                         </a>
                     </li>`;
-        });
-        ret += '</ul>';
-        this.$result.html(ret);
+            });
+            ret += '</ul>';
+            this.$result.html(ret);
+            this.$loading.addClass('hide');
+        }, 2000);
     }
     adapter(data) {
         let ret = [];
@@ -58,4 +58,4 @@ class Recomand {
     }
 }
 
-new Recomand().boot();
+new Search().init();

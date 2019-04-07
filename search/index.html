@@ -18,10 +18,19 @@
 
     .head {
         margin: 0;
+        background: #4f9ee2;
+        color: #fff;
+        line-height: 80px;
     }
+    .head .wrap{
+        background: #4f9ee2;
+        color: #fff;
+    }
+
     .main .wrap{
         font-size: 13px;
     }
+
     .operator{
         margin: 10px 0;
     }
@@ -48,6 +57,12 @@
         overflow: hidden;
     }
 
+    .fttl{
+        font-size: 16px;
+        color: #444;
+        margin-right: 5px;
+    }
+
     .img {
         width: 100px;
         margin-right:10px;
@@ -67,13 +82,47 @@
         line-height: 25px;
         border-radius: 3px;
         background: #eee;
-        border-radius: 1px solid #ccc;
+        border: 1px solid #ccc;
         padding: 2px 10px;
         font-size: 13px;
         cursor: pointer;
     }
     .update{
         display: block;
+    }
+
+    .loading{
+       text-align: center;
+    }
+    .bounce{
+        width: 30px;
+        height: 30px;
+        background-color: #67CF22;
+        border-radius: 100%;
+        display: inline-block;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        animation-fill-mode: both;
+    }
+    .loading .bounce1 {
+        animation-delay: -0.32s;
+    }
+
+    .loading .bounce2 {
+        animation-delay: -0.16s;
+    }
+
+    @keyframes bouncedelay {
+        0%, 80%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        40% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+    .hide{
+        display: none!important;
     }
     </style>
 </head>
@@ -87,9 +136,14 @@
     <div class="main">
         <div class="wrap">
             <div class="operator">
-                请输入检索关键字：
+                <span class="fttl">请输入检索关键字</span>
                 <input type="text" id="keyword" class="keyword">
                 <span class="search" id="search">检索</span>
+            </div>
+            <div class="loading hide" id="loading">
+                <i class="bounce bounce1"></i>
+                <i class="bounce bounce2"></i>
+                <i class="bounce bounce3"></i>
             </div>
             <div class="result" id="result">
             </div>
