@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>检索</title>
+    <style>
+
+    html,
+    body{
+        margin: 0;
+    }
+
+    .wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .head {
+        margin: 0;
+        background: #4f9ee2;
+        color: #fff;
+        line-height: 80px;
+    }
+    .head .wrap{
+        background: #4f9ee2;
+        color: #fff;
+    }
+
+    .main .wrap{
+        font-size: 13px;
+    }
+
+    .operator{
+        margin: 10px 0;
+    }
+
+    .recs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .poster {
+        color: #5087e2;
+        text-decoration: none;
+        border-bottom: none;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .link {
+        display: block;
+        color: #5087e2;
+        text-decoration: none;
+        font-size: 12px;
+        overflow: hidden;
+    }
+
+    .fttl{
+        font-size: 16px;
+        color: #444;
+        margin-right: 5px;
+    }
+
+    .img {
+        width: 100px;
+        margin-right:10px;
+        float: left;
+    }
+
+    .title {
+        margin: 0;
+        line-height: 25px;
+    }
+    .keyword{
+        line-height: 25px;
+        outline: none;
+    }
+    .search{
+        display: inline-block;
+        line-height: 25px;
+        border-radius: 3px;
+        background: #eee;
+        border: 1px solid #ccc;
+        padding: 2px 10px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    .update{
+        display: block;
+    }
+
+    .loading{
+       text-align: center;
+    }
+    .bounce{
+        width: 30px;
+        height: 30px;
+        background-color: #67CF22;
+        border-radius: 100%;
+        display: inline-block;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        animation-fill-mode: both;
+    }
+    .loading .bounce1 {
+        animation-delay: -0.32s;
+    }
+
+    .loading .bounce2 {
+        animation-delay: -0.16s;
+    }
+
+    @keyframes bouncedelay {
+        0%, 80%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        40% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+    .hide{
+        display: none!important;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="head">
+        <div class="wrap">
+            FIGHTING YI!
+        </div>
+    </h1>
+    <div class="main">
+        <div class="wrap">
+            <div class="operator">
+                <span class="fttl">请输入检索关键字</span>
+                <input type="text" id="keyword" class="keyword">
+                <span class="search" id="search">检索</span>
+            </div>
+            <div class="loading hide" id="loading">
+                <i class="bounce bounce1"></i>
+                <i class="bounce bounce2"></i>
+                <i class="bounce bounce3"></i>
+            </div>
+            <div class="result" id="result">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://list.video.baidu.com/pc_static/common/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src='./js/index.js'></script>
+</body>
+
+</html>
