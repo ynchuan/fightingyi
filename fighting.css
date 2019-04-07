@@ -1,0 +1,32 @@
+ul{
+	list-style-type:none;
+}
+a{
+	text-decoration: none;
+}
+.fighting{
+	margin: 30px 50px;
+	position:relative;
+	font-weight: bold;
+}
+.title{
+	height:50px;
+}
+.button{
+	cursor: pointer;
+}
+.container{
+	position:absolute;
+	top:50px;
+	left:0;
+	bottom:0;
+}
+.show{
+	padding: 20px;
+}
+.information, img{
+	vertical-align: middle;
+}
+.date{
+	padding:0 10px;
+}
