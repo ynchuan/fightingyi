@@ -69,12 +69,32 @@ html body {
 	z-index:1;
 }
 .close{
-	position:absolute;
-	top:5px;
-	right:15px;
-	font-size:25px;
-	color:red;
-	cursor: pointer;
+	position: absolute;
+    right: -25px;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+    background: silver;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.close:hover {
+    background: red;
+}
+.close:before, .close:after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 10px;
+    background: white;
+    top: 20px;
+    left: 10px;
+}
+.close:before {
+	 transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
 }
 .keyword {
     line-height: 25px;

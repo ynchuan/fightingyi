@@ -43,7 +43,7 @@ class Search {
                         </a>
                         <div class="mask hide">
                             <img class="big-img" src="${item.imgv_url}" tabIndex=2>
-                            <span class="close">X</span>
+                            <span class="close"></span>
                         </div>
                     </li>`;
             });
@@ -84,7 +84,7 @@ class Search {
         //     event.stopPropagation();
         //     return false;    
         // });
-        
+
         //mouseout和click冲突了，如果mouseout存在，当鼠标滑动到X时，图片就会关闭了。
         this.$result.on('click', (event) => {
             let target = event.target;
