@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset='utf-8'>
-	<title>fighting yi</title>
-	<link rel='stylesheet' type='text/css' href='fighting.css' />
+    <meta charset='utf-8'>
+    <title>fighting yi</title>
+    <link rel='stylesheet' type='text/css' href='fighting.css' />
 </head>
+
 <body>
-	<div class='fighting'>
-		<h1 class='title'>
-			FIGHTING YI!
-		</h1>
-		<div class='container'>
-			<div class='search'>
-				<p>检索功能</p>
-				<div class='search-input'>
-					请输入检索关键字：
-					<input type='text' name='searchKey' value=''>
-					<span class='button' id='searchButton'>检索</span>
-				</div>
-			</div>
-			<div class='result'>
-				<ul id='searchResult'>
-				</ul>
-			</div>
-		</div>
-	</div>
+    <h1 class="head">
+    	<div class="wrap">
+    		FIGHTING YI
+    	</div>
+    </h1>
+    <div class="main">
+    	<div class="wrap">
+    		<div class="operator">
+    			<span class="tip">请输入检索关键字</span>
+    			<input id="keyWords" type="text" class="keyword">
+    			<span class="search" id="searchButton">检索</span>
+    		</div>
+    		<div class="loading" id="loading">
+    			<i class="bounce bounce1"></i>
+    			<i class="bounce bounce2"></i>
+    			<i class="bounce bounce3"></i>
+    		</div>
+    		<div class="result" id="searchResult">
+    		</div>
+    	</div>
+    </div>
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
 <script src="fighting.js">
 </script>
+
 </html>

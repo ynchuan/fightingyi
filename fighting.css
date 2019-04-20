@@ -1,32 +1,138 @@
-ul{
-	list-style-type:none;
+html body {
+    margin: 0;
 }
-a{
-	text-decoration: none;
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
 }
-.fighting{
-	margin: 30px 50px;
-	position:relative;
-	font-weight: bold;
+
+.head {
+    margin: 0;
+    line-height: 80px;
+    background: #4f9ee2;
+    color: #fff;
 }
-.title{
-	height:50px;
+
+.main .wrap {
+    font-size: 13px;
 }
-.button{
+
+.operator {
+    margin: 10px 0;
+}
+
+.tip {
+    font-size: 16px;
+    color: #444;
+    margin-right: 5px;
+}
+
+.recs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.poster {
+    color: #5087e2;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 12px;
+    padding: 10px 0;
+    position:relative;
+}
+
+.link {
+    display: block;
+    color: #5087e2;
+    text-decoration: none;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100px;
+    margin-right: 10px;
+    float: left;
+}
+
+.title {
+    margin: 0;
+    line-height: 25px;
+}
+
+.mask{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+}
+.close{
+	position:absolute;
+	top:5px;
+	right:15px;
+	font-size:25px;
+	color:red;
 	cursor: pointer;
 }
-.container{
-	position:absolute;
-	top:50px;
-	left:0;
-	bottom:0;
+.keyword {
+    line-height: 25px;
+    outline: none;
 }
-.show{
-	padding: 20px;
+
+.search {
+    display: inline-block;
+    line-height: 25px;
+    border-radius: 3px;
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 2px 10px;
+    font-size: 13px;
+    cursor: pointer;
 }
-.information, img{
-	vertical-align: middle;
+
+.update {
+    display: block;
 }
-.date{
-	padding:0 10px;
+
+.loading {
+    text-align: center;
+}
+
+.bounce {
+    width: 30px;
+    height: 30px;
+    background-color: #67CF22;
+    border-radius: 100%;
+    display: inline-block;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    animation-fill-mode: both;
+}
+
+.loading .bounce1 {
+    animation-delay: -0.32s;
+}
+
+.loading .bounce2 {
+    animation-delay: -0.16s;
+}
+
+@keyframes bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.hide {
+    display: none !important;
 }
